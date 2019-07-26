@@ -73,7 +73,7 @@ buildvm -m folddef -o lj_folddef.h lj_opt_fold.c
 @if "%1" neq "debug" goto :NODEBUG
 @shift
 @set LJCOMPILE=%LJCOMPILE% /Zi
-@set LJLINK=%LJLINK% /debug /opt:ref /opt:icf /incremental:no
+@set LJLINK=%LJLINK% /opt:ref /opt:icf /incremental:no
 :NODEBUG
 @if "%1"=="amalg" goto :AMALGDLL
 @if "%1"=="static" goto :STATIC
